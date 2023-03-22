@@ -1,0 +1,15 @@
+
+<!-- ngIf -->
+<div *ngIf="booleanVariable"> Bienvenue </div>
+
+<!-- ngFor -->
+<li *ngFor="let item of items"> {{ item }} </li>
+
+<!-- ngSwitch -->
+<div [ngSwitch]="color">
+    <div *ngSwitchCase="'red'"> Rouge </div>
+    <div *ngSwitchCase="'green'"> Vert </div>
+    <div *ngSwitchCase="'blue'"> Bleu </div>
+    <div *ngSwitchDefault> Aucune couleur sélectionnée </div>
+</div>
+

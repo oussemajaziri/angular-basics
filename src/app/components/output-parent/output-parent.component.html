@@ -1,0 +1,6 @@
+<!-- @Output Parent Component -->
+<app-output-child (newObjEvent)="addObj($event)"></app-output-child >
+<ol>
+    <li *ngFor="let o of objs">{{o}}</li>
+</ol>
+

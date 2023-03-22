@@ -1,0 +1,20 @@
+<!-- Template Driven Form -->
+
+<form (ngSubmit)="login()">
+    
+    <div>
+        <label>Pseudo</label>
+        <input type="text" [(ngModel)]="user.pseudo" [ngModelOptions]="{standalone:true}">
+    </div>
+    <div>
+        <label>Mot de passe</label>
+        <input type="password" [(ngModel)]="user.pwd" [ngModelOptions]="{standalone:true}">
+    </div>
+
+    <div>
+        <button>Login</button>
+    </div>
+
+</form>
+
+

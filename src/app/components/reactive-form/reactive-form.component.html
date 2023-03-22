@@ -1,0 +1,47 @@
+<!-- Reactive Form -->
+<form [formGroup]="contactForm">
+
+    <div>
+        <label >Email</label>
+        <input type="text" formControlName="email" #email>
+        <div *ngIf='contactForm.controls["email"].invalid &&
+        contactForm.controls["email"].dirty || contactForm.controls["email"].touched'>
+            <div *ngIf='contactForm.controls["email"]?.errors?.required'>
+                Email est obligatoire
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <label >Name</label>
+        <input type="text" formControlName="name" #name>
+        <div *ngIf='contactForm.controls["name"].invalid &&
+        contactForm.controls["name"].dirty || contactForm.controls["name"].touched'>
+            <div *ngIf='contactForm.controls["name"]?.errors?.required'>
+                Email est obligatoire
+            </div>
+        </div>
+    </div>
+
+    <div>
+        <label >Message</label>
+        <input type="text" formControlName="mesaage" #message>
+        <div *ngIf='contactForm.controls["mesaage"].invalid &&
+        contactForm.controls["mesaage"].dirty || contactForm.controls["mesaage"].touched'>
+            <div *ngIf='contactForm.controls["mesaage"]?.errors?.required'>
+                Message est obligatoire
+            </div>
+        </div>
+        <div *ngIf='contactForm.controls["mesaage"].invalid &&
+        contactForm.controls["mesaage"].dirty || contactForm.controls["mesaage"].touched'>
+            <div *ngIf='contactForm.controls["mesaage"]?.errors?.minlength'>
+                Message doit contenir au moins 10 caractères
+            </div>
+        </div>
+    </div>
+
+    <button (click)="sendMessage(message.value)" >Contacter</button>
+
+</form>
+
+

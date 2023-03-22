@@ -1,0 +1,8 @@
+<button (click)="showMsg()">Message</button>
+<p>{{message}}</p>
+
+<textarea [(ngModel)]="enteredValue"></textarea>
+<button (click)="addText()">send</button>
+<p>{{newPost}}</p>
+
+<button [disabled]="disabled">click</button>

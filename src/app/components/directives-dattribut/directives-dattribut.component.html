@@ -1,0 +1,18 @@
+<!-- ngModel -->
+<input type="text" [(ngModel)]="nom">
+<p>Bonjour {{nom}}</p>
+
+<!-- ngStyle  -->
+<div [ngStyle]="{'background-color': bgColor}">
+    <p>Mon élément avec style dynamique</p>
+    <button (click)="changeColor()">Changer la couleur</button>
+</div>
+
+<!-- ngClass -->
+<div [ngClass]="{'active': isActive}">
+    Contenu de la div
+</div>
+<button (click)="changeClass()">Changer la couleur</button>
+
+
+
